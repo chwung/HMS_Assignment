@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:text="BYE"
         android:textSize="20sp"
+        android:textColor="@color/purple_700"
         app:layout_constraintTop_toBottomOf="@id/text_view_1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
