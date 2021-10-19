@@ -3,9 +3,12 @@ package com.test.hmsassignment;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class GamesActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,5 +25,6 @@ public class GamesActivity extends AppCompatActivity {
 
         GamesAdapter adapter = new GamesAdapter(games);
         recyclerView.setAdapter(adapter);
+
     }
 }
