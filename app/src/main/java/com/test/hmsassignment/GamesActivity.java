@@ -26,5 +26,15 @@ public class GamesActivity extends AppCompatActivity {
         GamesAdapter adapter = new GamesAdapter(games);
         recyclerView.setAdapter(adapter);
 
+        recyclerView.addOnItemTouchListener(new RecyclerGamesClickListener(recyclerView, new RecyclerGamesClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                //Toast.makeText(StartersActivity.this, dishes[position].title, Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(GamesActivity.this, SnakeActivity.class);
+                //We have to pass key-value parameters
+                startActivity(intent);
+            }
+        }));
     }
 }

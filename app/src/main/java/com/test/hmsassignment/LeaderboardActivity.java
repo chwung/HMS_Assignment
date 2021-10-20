@@ -19,7 +19,6 @@ public class LeaderboardActivity extends AppCompatActivity {
                 new Leaderboard("John", 1000),
                 new Leaderboard("Mac", 850),
                 new Leaderboard("Lola", 900),
-
         };
 
         ArrayAdapter<Leaderboard> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, leaderboards);
