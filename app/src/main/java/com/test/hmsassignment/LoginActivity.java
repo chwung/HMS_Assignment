@@ -10,6 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+//ad kit
+import com.huawei.hms.ads.AdParam;
+import com.huawei.hms.ads.BannerAdSize;
+import com.huawei.hms.ads.banner.BannerView;
+
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText editTextName;
@@ -22,8 +28,21 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         editTextName = findViewById(R.id.edit_text_name);
         btnEnter = findViewById(R.id.button_enter);
+
+        //Ad Kit
+        // Obtain BannerView.
+        BannerView bannerView = findViewById(R.id.hw_banner_view);
+        // Set the ad unit ID and ad dimensions. "testw6vs28auh3" is a dedicated test ad unit ID.
+        bannerView.setAdId("testw6vs28auh3");
+        bannerView.setBannerAdSize(BannerAdSize.BANNER_SIZE_360_57);
+        // Set the refresh interval to 30 seconds.
+        bannerView.setBannerRefresh(30);
+        // Create an ad request to load an ad.
+        AdParam adParam = new AdParam.Builder().build();
+        bannerView.loadAd(adParam);
 
         editTextName.addTextChangedListener(new TextWatcher() {
             @Override
